@@ -27,7 +27,8 @@
       --ff-mono: 'JetBrains Mono', monospace;
     }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { overflow-x: hidden; }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
@@ -147,6 +148,10 @@
       color: var(--muted);
       text-decoration: none;
       transition: color .2s;
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0 4px;
     }
     .nav-right a:hover { color: var(--ink); }
     .nav-right a:focus-visible,
@@ -163,7 +168,11 @@
       font-weight: 500 !important;
       color: var(--rust) !important;
       border: 1.5px solid var(--rust);
-      padding: 7px 18px;
+      padding: 10px 18px;
+      min-height: 44px;
+      box-sizing: border-box;
+      display: inline-flex;
+      align-items: center;
       border-radius: 2px;
       letter-spacing: 0.05em;
       text-transform: uppercase;
@@ -259,6 +268,7 @@
       background: var(--ink);
       color: var(--parch);
       padding: 13px 26px;
+      min-height: 44px;
       border-radius: 2px;
       font-size: 0.8rem;
       font-weight: 500;
@@ -276,6 +286,7 @@
       background: transparent;
       color: var(--muted);
       padding: 13px 26px;
+      min-height: 44px;
       border-radius: 2px;
       border: 1px solid var(--border);
       font-size: 0.8rem;
@@ -312,7 +323,7 @@
       font-size: 0.68rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(244,237,224,0.4);
+      color: rgba(244,237,224,0.65);
     }
     .ticker-item span { color: var(--rust2); }
     @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
@@ -474,7 +485,7 @@
       color: var(--parch);
       border-top: 1px solid rgba(255,255,255,0.05);
     }
-    #withbff .sec-label { color: rgba(244,237,224,0.45); }
+    #withbff .sec-label { color: rgba(244,237,224,0.65); }
     #withbff .sec-label::after { background: rgba(244,237,224,0.08); }
     #withbff h2.sec-title { color: var(--parch); }
     #withbff h2.sec-title em { color: var(--rust2); }
@@ -543,7 +554,7 @@
       font-size: clamp(1.3rem, 2.2vw, 1.75rem);
       font-style: italic;
       font-weight: 300;
-      color: rgba(244,237,224,0.55);
+      color: rgba(244,237,224,0.78);
       line-height: 1.45;
       letter-spacing: -0.02em;
       margin-bottom: 36px;
@@ -567,7 +578,7 @@
       margin-top: 3px;
     }
     .bff-p-title { font-size: 0.875rem; font-weight: 500; color: var(--parch); margin-bottom: 4px; }
-    .bff-p-desc { font-size: 0.78rem; color: rgba(244,237,224,0.4); line-height: 1.65; font-weight: 300; }
+    .bff-p-desc { font-size: 0.78rem; color: rgba(244,237,224,0.75); line-height: 1.65; font-weight: 300; }
 
     .bff-cta {
       display: inline-flex;
@@ -714,7 +725,7 @@
       font-size: 0.62rem;
       letter-spacing: 0.09em;
       text-transform: uppercase;
-      color: rgba(244,237,224,0.45);
+      color: rgba(244,237,224,0.7);
       border: 1px solid rgba(255,255,255,0.08);
       padding: 6px 14px;
       border-radius: 2px;
@@ -724,10 +735,14 @@
       font-size: 0.68rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: rgba(244,237,224,0.4);
+      color: rgba(244,237,224,0.75);
       background: none;
       border: 1px solid rgba(255,255,255,0.1);
-      padding: 8px 18px;
+      padding: 12px 18px;
+      min-height: 44px;
+      box-sizing: border-box;
+      display: inline-flex;
+      align-items: center;
       border-radius: 2px;
       cursor: pointer;
       font-family: inherit;
@@ -764,7 +779,7 @@
     }
     .cs-body p {
       font-size: 0.875rem;
-      color: rgba(244,237,224,0.55);
+      color: rgba(244,237,224,0.8);
       line-height: 1.85;
       font-weight: 300;
       margin-bottom: 14px;
@@ -799,7 +814,7 @@
     }
     .cs-g4icon { font-size: 1.3rem; margin-bottom: 8px; }
     .cs-g4label { font-size: 0.75rem; font-weight: 500; color: var(--parch); margin-bottom: 3px; }
-    .cs-g4sub { font-size: 0.65rem; font-family: var(--ff-mono); color: rgba(244,237,224,0.5); letter-spacing: 0.04em; }
+    .cs-g4sub { font-size: 0.65rem; font-family: var(--ff-mono); color: rgba(244,237,224,0.7); letter-spacing: 0.04em; }
 
     .cs-rows { border: 1px solid rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden; }
     .cs-row {
@@ -812,7 +827,7 @@
     }
     .cs-row:last-child { border-bottom: none; }
     .cs-row strong { color: var(--parch); font-weight: 500; flex-shrink: 0; min-width: 190px; }
-    .cs-row span { color: rgba(244,237,224,0.45); font-weight: 300; }
+    .cs-row span { color: rgba(244,237,224,0.7); font-weight: 300; }
 
     .cs-decisions { display: flex; flex-direction: column; gap: 12px; }
     .cs-d {
@@ -854,7 +869,7 @@
     }
     .cs-fi { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
     .cs-flow strong { font-size: 0.83rem; font-weight: 500; color: var(--parch); display: block; margin-bottom: 3px; }
-    .cs-flow p { font-size: 0.78rem; color: rgba(244,237,224,0.4); line-height: 1.65; margin: 0 !important; font-weight: 300; }
+    .cs-flow p { font-size: 0.78rem; color: rgba(244,237,224,0.75); line-height: 1.65; margin: 0 !important; font-weight: 300; }
 
     .cs-outcomes { display: flex; flex-direction: column; gap: 10px; }
     .cs-oc {
@@ -953,14 +968,14 @@
       letter-spacing: -0.05em;
     }
     #contact .sec-inner { position: relative; z-index: 1; }
-    #contact .sec-label { color: rgba(244,237,224,0.45); }
+    #contact .sec-label { color: rgba(244,237,224,0.65); }
     #contact .sec-label::after { background: rgba(244,237,224,0.08); }
     #contact h2.sec-title { color: var(--parch); margin-bottom: 16px; }
     #contact h2.sec-title em { color: var(--rust2); }
 
     .contact-sub {
       font-size: 0.95rem;
-      color: rgba(244,237,224,0.45);
+      color: rgba(244,237,224,0.78);
       font-weight: 300;
       max-width: 440px;
       line-height: 1.8;
@@ -976,9 +991,11 @@
       font-size: 0.7rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: rgba(244,237,224,0.55);
+      color: rgba(244,237,224,0.85);
       border: 1px solid rgba(255,255,255,0.1);
       padding: 12px 22px;
+      min-height: 44px;
+      box-sizing: border-box;
       border-radius: 2px;
       text-decoration: none;
       transition: color .2s, border-color .2s, transform .2s;
@@ -1005,7 +1022,7 @@
       font-family: var(--ff-mono);
       font-size: 0.62rem;
       letter-spacing: 0.08em;
-      color: rgba(244,237,224,0.4);
+      color: rgba(244,237,224,0.7);
     }
     .f-made span { color: var(--rust); }
 
@@ -1090,13 +1107,13 @@
     .cs-phase-date {
       font-family: var(--ff-mono);
       font-size: 0.62rem;
-      color: rgba(244,237,224,0.5);
+      color: rgba(244,237,224,0.7);
       letter-spacing: 0.06em;
       margin-bottom: 10px;
     }
     .cs-phase-desc {
       font-size: 0.8rem;
-      color: rgba(244,237,224,0.45);
+      color: rgba(244,237,224,0.75);
       line-height: 1.65;
       font-weight: 300;
     }
@@ -1114,12 +1131,12 @@
       font-size: 0.58rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(244,237,224,0.45);
+      color: rgba(244,237,224,0.7);
       margin-bottom: 8px;
     }
     .cs-hardpart p {
       font-size: 0.85rem !important;
-      color: rgba(244,237,224,0.6) !important;
+      color: rgba(244,237,224,0.82) !important;
       margin: 0 !important;
       line-height: 1.75 !important;
       font-style: italic;
@@ -1135,11 +1152,11 @@
       border-bottom: 1px solid rgba(255,255,255,0.05);
     }
     .cs-bet:last-child { border-bottom: none; }
-    .cs-bet-label { font-family: var(--ff-mono); font-size: 0.62rem; letter-spacing: 0.07em; color: rgba(244,237,224,0.5); line-height: 1.5; padding-top: 2px; }
+    .cs-bet-label { font-family: var(--ff-mono); font-size: 0.62rem; letter-spacing: 0.07em; color: rgba(244,237,224,0.7); line-height: 1.5; padding-top: 2px; }
     .cs-bet-label strong { color: var(--rust2); display: block; font-size: 0.68rem; margin-bottom: 4px; }
     .cs-bet-body {}
     .cs-bet-title { font-size: 0.9rem; font-weight: 500; color: var(--parch); margin-bottom: 8px; }
-    .cs-bet-text { font-size: 0.82rem; color: rgba(244,237,224,0.5); line-height: 1.75; font-weight: 300; }
+    .cs-bet-text { font-size: 0.82rem; color: rgba(244,237,224,0.78); line-height: 1.75; font-weight: 300; }
     .cs-bet-text strong { color: rgba(244,237,224,0.75); font-weight: 500; }
 
     /* ── TRADEOFF CHIP ── */
@@ -1150,7 +1167,7 @@
       font-family: var(--ff-mono);
       font-size: 0.6rem;
       letter-spacing: 0.06em;
-      color: rgba(244,237,224,0.5);
+      color: rgba(244,237,224,0.75);
       border: 1px solid rgba(255,255,255,0.06);
       padding: 4px 10px;
       border-radius: 2px;
@@ -1181,7 +1198,7 @@
       font-family: var(--ff-mono);
       font-size: 0.6rem;
       letter-spacing: 0.07em;
-      color: rgba(244,237,224,0.5);
+      color: rgba(244,237,224,0.72);
       text-transform: uppercase;
     }
 
@@ -1191,7 +1208,7 @@
     }
     /* ── GITHUB SECTION ── */
     #github { background: var(--ink); border-top: 1px solid rgba(255,255,255,0.05); }
-    #github .sec-label { color: rgba(244,237,224,0.45); }
+    #github .sec-label { color: rgba(244,237,224,0.65); }
     #github .sec-label::after { background: rgba(244,237,224,0.08); }
     #github h2.sec-title { color: var(--parch); }
     #github h2.sec-title em { color: var(--rust2); }
@@ -1218,7 +1235,7 @@
       font-size: 0.62rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(244,237,224,0.45);
+      color: rgba(244,237,224,0.7);
       margin-bottom: 16px;
       display: flex;
       align-items: center;
@@ -1272,7 +1289,7 @@
       font-size: 0.58rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: rgba(244,237,224,0.45);
+      color: rgba(244,237,224,0.7);
     }
 
     .gh-right {}
@@ -1283,7 +1300,7 @@
       font-family: var(--ff-mono);
       font-size: 0.72rem;
       letter-spacing: 0.06em;
-      color: rgba(244,237,224,0.4);
+      color: rgba(244,237,224,0.85);
       border: 1px solid rgba(255,255,255,0.08);
       padding: 8px 16px;
       border-radius: 2px;
@@ -1297,7 +1314,7 @@
 
     .gh-desc {
       font-size: 0.875rem;
-      color: rgba(244,237,224,0.45);
+      color: rgba(244,237,224,0.8);
       font-weight: 300;
       line-height: 1.9;
       margin-bottom: 32px;
@@ -1314,7 +1331,7 @@
       text-decoration: none;
     }
     .gh-repo:first-child { border-top: 1px solid rgba(255,255,255,0.05); }
-    .gh-repo-icon { color: rgba(244,237,224,0.35); font-size: 0.9rem; margin-top: 2px; flex-shrink: 0; }
+    .gh-repo-icon { color: rgba(244,237,224,0.65); font-size: 0.9rem; margin-top: 2px; flex-shrink: 0; }
     .gh-repo-name {
       font-family: var(--ff-mono);
       font-size: 0.75rem;
@@ -1322,7 +1339,7 @@
       margin-bottom: 3px;
       letter-spacing: 0.02em;
     }
-    .gh-repo-desc { font-size: 0.78rem; color: rgba(244,237,224,0.5); font-weight: 300; line-height: 1.5; }
+    .gh-repo-desc { font-size: 0.78rem; color: rgba(244,237,224,0.75); font-weight: 300; line-height: 1.5; }
 
     @media (max-width: 768px) {
       .gh-layout { grid-template-columns: 1fr; gap: 36px; }
@@ -1441,7 +1458,7 @@
       font-size: 0.58rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(244,237,224,0.45);
+      color: rgba(244,237,224,0.7);
       margin-bottom: 10px;
     }
     .ai-closer-text {
@@ -1560,7 +1577,11 @@
       font-size: 0.62rem;
       letter-spacing: 0.09em;
       text-transform: uppercase;
-      padding: 6px 14px;
+      padding: 10px 14px;
+      min-height: 44px;
+      box-sizing: border-box;
+      display: inline-flex;
+      align-items: center;
       border-radius: 2px;
       cursor: pointer;
       transition: color .2s, border-color .2s;
@@ -1624,7 +1645,9 @@
       letter-spacing: 0.09em;
       text-transform: uppercase;
       border: none;
-      padding: 9px 18px;
+      padding: 12px 18px;
+      min-height: 44px;
+      box-sizing: border-box;
       border-radius: 2px;
       cursor: pointer;
       text-decoration: none;
@@ -1639,7 +1662,11 @@
       font-size: 0.6rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 8px 16px;
+      padding: 12px 16px;
+      min-height: 44px;
+      box-sizing: border-box;
+      display: inline-flex;
+      align-items: center;
       border-radius: 2px;
       cursor: pointer;
       transition: color .2s, border-color .2s;
@@ -2025,7 +2052,7 @@
       </div>
 
       <div class="cs-footer">
-        <button class="btn-ghost cs-trigger" data-panel="bff-cs" data-label="bff-cta-lbl" style="color:rgba(244,237,224,0.5); border-color:rgba(255,255,255,0.12);">↑ Collapse case study</button>
+        <button class="btn-ghost cs-trigger" data-panel="bff-cs" data-label="bff-cta-lbl" style="color:rgba(244,237,224,0.8); border-color:rgba(255,255,255,0.12);">↑ Collapse case study</button>
       </div>
     </div>
 
@@ -2206,7 +2233,7 @@
 
           </div>
           <div class="cs-footer">
-            <button class="btn-ghost cs-trigger" data-panel="abais-cs" data-label="abais-lbl" style="color:rgba(244,237,224,0.5);border-color:rgba(255,255,255,0.12);">↑ Collapse case study</button>
+            <button class="btn-ghost cs-trigger" data-panel="abais-cs" data-label="abais-lbl" style="color:rgba(244,237,224,0.8);border-color:rgba(255,255,255,0.12);">↑ Collapse case study</button>
           </div>
         </div>
       </div>
@@ -2371,7 +2398,7 @@
 
           </div>
           <div class="cs-footer">
-            <button class="btn-ghost cs-trigger" data-panel="aie-cs" data-label="aie-lbl" style="color:rgba(244,237,224,0.5);border-color:rgba(255,255,255,0.12);">↑ Collapse case study</button>
+            <button class="btn-ghost cs-trigger" data-panel="aie-cs" data-label="aie-lbl" style="color:rgba(244,237,224,0.8);border-color:rgba(255,255,255,0.12);">↑ Collapse case study</button>
           </div>
         </div>
       </div>
@@ -2580,7 +2607,7 @@
 
           </div>
           <div class="cs-footer">
-            <button class="btn-ghost cs-trigger" data-panel="nc-cs" data-label="nc-lbl" style="color:rgba(244,237,224,0.5);border-color:rgba(255,255,255,0.12);">↑ Collapse case study</button>
+            <button class="btn-ghost cs-trigger" data-panel="nc-cs" data-label="nc-lbl" style="color:rgba(244,237,224,0.8);border-color:rgba(255,255,255,0.12);">↑ Collapse case study</button>
           </div>
         </div>
       </div>
@@ -2797,7 +2824,7 @@
 
           </div>
           <div class="cs-footer">
-            <button class="btn-ghost cs-trigger" data-panel="aura-cs" data-label="aura-lbl" style="color:rgba(244,237,224,0.5);border-color:rgba(255,255,255,0.12);">↑ Collapse case study</button>
+            <button class="btn-ghost cs-trigger" data-panel="aura-cs" data-label="aura-lbl" style="color:rgba(244,237,224,0.8);border-color:rgba(255,255,255,0.12);">↑ Collapse case study</button>
           </div>
         </div>
       </div>
@@ -2977,7 +3004,7 @@
 
           </div>
           <div class="cs-footer">
-            <button class="btn-ghost cs-trigger" data-panel="ii-cs" data-label="ii-lbl" style="color:rgba(244,237,224,0.5);border-color:rgba(255,255,255,0.12);">↑ Collapse case study</button>
+            <button class="btn-ghost cs-trigger" data-panel="ii-cs" data-label="ii-lbl" style="color:rgba(244,237,224,0.8);border-color:rgba(255,255,255,0.12);">↑ Collapse case study</button>
           </div>
         </div>
       </div>
@@ -3038,7 +3065,7 @@
   </div>
   <div class="drawer-body">
     <p class="drawer-date" id="drawer-date"></p>
-    <h1 class="drawer-title" id="drawer-title"></h1>
+    <h2 class="drawer-title" id="drawer-title"></h2>
     <p class="drawer-sub" id="drawer-sub"></p>
     <div class="drawer-content" id="drawer-content"></div>
   </div>
