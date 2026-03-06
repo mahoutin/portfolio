@@ -609,6 +609,8 @@
     }
     .wcard:hover { background: var(--parch2); }
     .wcard.span2 { grid-column: 1 / -1; flex-direction: row; }
+    .wcard.span2.cover-full { flex-direction: column; }
+    .wcard.span2.cover-full .wcard-thumb { width: 100%; aspect-ratio: 16/9; min-height: 200px; }
 
     .wcard-thumb {
       aspect-ratio: 16/9;
@@ -637,6 +639,8 @@
     .tw3 { background: linear-gradient(135deg, #E4EDE0, #C5D9BA); }
     .tw4 { background: linear-gradient(135deg, #F5EDD6, #E8D8B0); }
     .tw5 { background: linear-gradient(135deg, #EAF0F8, #C4D4E8); }
+    .tw-aie { background: linear-gradient(145deg, #EDE8F5, #E0D8EC); }
+    .tw-nc { background: linear-gradient(145deg, #E8F4E8, #D4EBD4); }
 
     .wcard-body { padding: 28px 32px; display: flex; flex-direction: column; justify-content: center; flex: 1; }
 
@@ -2031,8 +2035,8 @@
       </div>
 
       <!-- ── AIE / Insured Portal card ── -->
-      <div class="wcard span2 cs-trigger" data-panel="aie-cs" data-label="aie-lbl" style="cursor:pointer;">
-        <div class="wcard-thumb wcard-thumb-cover" style="aspect-ratio:auto;min-height:280px;width:48%;flex-shrink:0;background:linear-gradient(145deg,#EDE8F5,#E0D8EC);">
+      <div class="wcard span2 cover-full cs-trigger" data-panel="aie-cs" data-label="aie-lbl" style="cursor:pointer;">
+        <div class="wcard-thumb wcard-thumb-cover tw-aie">
           <img src="images/2.png" alt="Insured Portal - AIE / Great American" loading="lazy" />
         </div>
         <div class="wcard-body">
@@ -2196,8 +2200,8 @@
       </div>
 
       <!-- ── Noonclass card ── -->
-      <div class="wcard span2 cs-trigger" data-panel="nc-cs" data-label="nc-lbl" style="cursor:pointer;">
-        <div class="wcard-thumb wcard-thumb-cover" style="aspect-ratio:auto;min-height:280px;width:48%;flex-shrink:0;background:linear-gradient(145deg,#E8F4E8,#D4EBD4);">
+      <div class="wcard span2 cover-full cs-trigger" data-panel="nc-cs" data-label="nc-lbl" style="cursor:pointer;">
+        <div class="wcard-thumb wcard-thumb-cover tw-nc">
           <img src="images/32.png" alt="Noonclass - Operating System for Independent Tutors" loading="lazy" />
         </div>
         <div class="wcard-body">
