@@ -1600,6 +1600,7 @@
       box-shadow: 0 24px 80px rgba(0,0,0,0.3);
     }
 
+    /* toolbar */
     .resume-toolbar {
       display: flex; align-items: center; justify-content: space-between;
       padding: 16px 32px;
@@ -1646,6 +1647,7 @@
     }
     .resume-close-btn:hover { color: var(--ink); border-color: var(--ink2); }
 
+    /* resume body */
     .resume-body { padding: 52px 56px 64px; }
 
     .res-header { margin-bottom: 36px; padding-bottom: 28px; border-bottom: 2px solid var(--ink); }
@@ -1690,20 +1692,37 @@
       border-bottom: 1px solid rgba(192,90,30,0.2);
     }
 
+    /* skills */
     .res-skill-group { margin-bottom: 12px; }
-    .res-skill-label { font-size: 0.65rem; font-weight: 600; color: var(--ink); margin-bottom: 3px; }
-    .res-skill-val { font-size: 0.7rem; color: var(--muted); font-weight: 300; line-height: 1.6; }
+    .res-skill-label {
+      font-size: 0.65rem; font-weight: 600; color: var(--ink);
+      margin-bottom: 3px;
+    }
+    .res-skill-val {
+      font-size: 0.7rem; color: var(--muted);
+      font-weight: 300; line-height: 1.6;
+    }
 
+    /* education & certs */
     .res-edu-item { margin-bottom: 10px; }
     .res-edu-name { font-size: 0.75rem; font-weight: 500; color: var(--ink); }
     .res-edu-sub { font-size: 0.67rem; color: var(--muted); font-weight: 300; }
 
+    /* experience */
     .res-job { margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--border); }
     .res-job:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
     .res-job-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 4px; }
     .res-job-title { font-size: 0.8rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; }
-    .res-job-dates { font-family: var(--ff-mono); font-size: 0.58rem; letter-spacing: 0.06em; color: var(--muted); white-space: nowrap; flex-shrink: 0; }
-    .res-job-company { font-family: var(--ff-mono); font-size: 0.6rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--rust); margin-bottom: 10px; }
+    .res-job-dates {
+      font-family: var(--ff-mono); font-size: 0.58rem;
+      letter-spacing: 0.06em; color: var(--muted);
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .res-job-company {
+      font-family: var(--ff-mono); font-size: 0.6rem;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--rust); margin-bottom: 10px;
+    }
     .res-job-desc { font-size: 0.75rem; color: var(--muted); font-weight: 300; line-height: 1.8; }
     .res-job-desc strong { color: var(--ink); font-weight: 500; }
 
@@ -1721,7 +1740,13 @@
     @media print {
       body > *:not(.resume-panel) { display: none !important; }
       .resume-overlay { display: none !important; }
-      .resume-panel { position: static !important; opacity: 1 !important; transform: none !important; pointer-events: all !important; padding: 0 !important; }
+      .resume-panel {
+        position: static !important;
+        opacity: 1 !important;
+        transform: none !important;
+        pointer-events: all !important;
+        padding: 0 !important;
+      }
       .resume-sheet { box-shadow: none !important; }
       .resume-toolbar { display: none !important; }
       .resume-body { padding: 32px !important; }
@@ -1808,7 +1833,7 @@
         <div class="about-photo-block">
           <div class="about-photo"><img src="pro.jpeg" alt="Alexander, portrait" /></div>
           <div class="about-photo-meta">
-            <div class="photo-meta-line">SENIOR PRODUCT DESIGNER</div>
+            <div class="photo-meta-line">Based in New York City</div>
             <div class="photo-meta-line">Open to remote and in person work</div>
             <div class="photo-meta-line">Speaks English, French & Spanish</div>
           </div>
@@ -3178,7 +3203,7 @@
     <h2 class="sec-title">Let's build something<br><em>worth building</em>.</h2>
     <p class="contact-sub">Whether you're a founder, hiring manager, or just want to talk shop about design and AI, I'm always up for it.</p>
     <div class="contact-row">
-      <a href="mailto:hounsoumahoutin@gmail.com" class="c-link">
+      <a href="/cdn-cgi/l/email-protection#b5dddac0dbc6dac0d8d4dddac0c1dcdbf5d2d8d4dcd99bd6dad8" class="c-link">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
         Email
       </a>
@@ -3206,7 +3231,7 @@
 
 </main>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   document.addEventListener('DOMContentLoaded', function() {
 
     // ── Live region for screen reader announcements ──
@@ -3402,8 +3427,8 @@
       el.addEventListener('mouseleave', function() {
         cur.style.width  = '8px';
         cur.style.height = '8px';
-        curX.style.width  = '32px';
-        curX.style.height = '32px';
+        curX.style.width  = '24px';
+        curX.style.height = '24px';
       });
     });
 
@@ -3461,13 +3486,13 @@
 
       <div class="res-header">
         <div class="res-name">Alexander <em>Hounsou</em></div>
-        <div class="res-title">Founder · Product Designer · Product Engineer</div>
+        <div class="res-title">Founder · Product Engineer · Design Engineer</div>
         <div class="res-contact">
           <span>Indianapolis, IN</span>
           <a href="mailto:hounsoumahoutin@gmail.com">hounsoumahoutin@gmail.com</a>
           <span>317-384-0676</span>
           <a href="https://linkedin.com/in/alexander-hounsou" target="_blank">linkedin.com/in/alexander-hounsou</a>
-     
+          <a href="https://withbff.com" target="_blank">withbff.com</a>
         </div>
       </div>
 
@@ -3477,7 +3502,9 @@
 
       <div class="res-cols">
 
+        <!-- LEFT COLUMN -->
         <div>
+
           <div class="res-section">
             <div class="res-section-title">Skills</div>
             <div class="res-skill-group">
@@ -3549,15 +3576,18 @@
               <div class="res-edu-sub">Native · AI workshops instructor</div>
             </div>
           </div>
+
         </div>
 
+        <!-- RIGHT COLUMN -->
         <div>
+
           <div class="res-section">
             <div class="res-section-title">Experience</div>
 
             <div class="res-job">
               <div class="res-job-top">
-                <div class="res-job-title">Founder · Product Engineer</div>
+                <div class="res-job-title">Founder · Product Designer</div>
                 <div class="res-job-dates">2025 - Present</div>
               </div>
               <div class="res-job-company">WithBFF</div>
@@ -3568,7 +3598,7 @@
 
             <div class="res-job">
               <div class="res-job-top">
-                <div class="res-job-title">Co-Founder · CEO</div>
+                <div class="res-job-title">Co-Founder · Product Designer</div>
                 <div class="res-job-dates">Oct 2024 - Jun 2025</div>
               </div>
               <div class="res-job-company">InsuredInsights.ai</div>
