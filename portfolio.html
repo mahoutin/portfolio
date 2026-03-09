@@ -1623,15 +1623,15 @@
 
     .resume-toolbar {
       display: flex; align-items: center; justify-content: space-between;
-      padding: 16px 32px;
+      padding: 12px 24px;
       border-bottom: 1px solid var(--border);
-      background: rgba(250,245,236,0.97);
+      background: var(--cream);
       position: sticky; top: 0; z-index: 1;
     }
     .resume-toolbar-left {
       font-family: var(--ff-mono);
-      font-size: 0.6rem;
-      letter-spacing: 0.1em;
+      font-size: 0.55rem;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--muted);
     }
@@ -1673,7 +1673,7 @@
     }
     .resume-close-btn:hover { color: var(--ink); border-color: var(--ink2); }
 
-    .resume-body { padding: 52px 56px 64px; }
+    .resume-body { padding: 56px 64px 72px; }
 
     .res-header { margin-bottom: 36px; padding-bottom: 28px; border-bottom: 2px solid var(--ink); }
     .res-name {
@@ -1746,13 +1746,46 @@
     .res-summary strong { color: var(--ink); font-weight: 500; }
 
     @media print {
+      @page {
+        size: letter;
+        margin: 0.5in 0.25in 0.25in 0.25in;
+      }
+      body {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
       body > *:not(.resume-panel) { display: none !important; }
       .resume-overlay { display: none !important; }
-      .resume-panel { position: static !important; opacity: 1 !important; transform: none !important; pointer-events: all !important; padding: 0 !important; }
-      .resume-sheet { box-shadow: none !important; }
+      .resume-panel {
+        position: static !important;
+        opacity: 1 !important;
+        transform: none !important;
+        pointer-events: all !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        width: 100% !important;
+      }
+      .resume-sheet {
+        box-shadow: none !important;
+        max-width: none !important;
+        width: 100% !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
       .resume-toolbar { display: none !important; }
-      .resume-body { padding: 32px !important; }
-    }
+      .resume-body {
+        padding: 36px 56px 40px !important;
+        max-width: none !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .resume-body,
+      .resume-body * {
+        color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      }
   </style>
 </head>
 <body>
@@ -3476,7 +3509,7 @@
     <div class="resume-toolbar">
       <span class="resume-toolbar-left">Alexander Hounsou · Resume 2026</span>
       <div class="resume-toolbar-right">
-        <button class="resume-dl-btn" id="resume-dl-btn">
+        <button class="resume-dl-btn" id="resume-dl-btn" title="Uncheck &quot;Headers and footers&quot; in the print dialog to remove the date and title from your PDF.">
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v7M3 5.5l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Download PDF
         </button>
