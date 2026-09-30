@@ -1,0 +1,3 @@
+const viewer=document.querySelector('#viewer');let trigger;
+document.querySelectorAll('[data-image]').forEach(button=>button.addEventListener('click',()=>{trigger=button;viewer.querySelector('img').src=button.dataset.image;viewer.querySelector('img').alt=button.dataset.alt;viewer.querySelector('#viewer-label').textContent=button.dataset.alt;viewer.showModal();}));
+viewer.querySelector('.close').addEventListener('click',()=>viewer.close());viewer.addEventListener('click',e=>{if(e.target===viewer){const r=viewer.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)viewer.close();}});viewer.addEventListener('close',()=>trigger?.focus());

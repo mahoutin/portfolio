@@ -1,5 +1,45 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/portfolio.html" }
-  ]
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/nomi",
+      "destination": "/nomi/index.html"
+    },
+    {
+      "source": "/nomi/",
+      "destination": "/nomi/index.html"
+    },
+    {
+      "source": "/aie-insured-portal",
+      "destination": "/aie-insured-portal/index.html"
+    },
+    {
+      "source": "/aie-insured-portal/",
+      "destination": "/aie-insured-portal/index.html"
+    },
+    {
+      "source": "/coverage-collective",
+      "destination": "/coverage-collective/index.html"
+    },
+    {
+      "source": "/coverage-collective/",
+      "destination": "/coverage-collective/index.html"
+    },
+    {
+      "source": "/resume",
+      "destination": "/resume/index.html"
+    },
+    {
+      "source": "/resume/",
+      "destination": "/resume/index.html"
+    }
+  ],
+  "git": {
+    "deploymentEnabled": {
+      "studio-redesign": false
+    }
+  }
 }
